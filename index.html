@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de Personas</title>
+  </head>
+  <body>
+    <script>
+      // Función para registrar personas
+      function registrarPersonas() {
+        const personas = [];
+        let numPersonas = parseInt(
+          prompt("Ingrese el número de personas que desea registrar:")
+        );
+
+        // Validar que numPersonas sea un número válido y mayor a 1
+        while (isNaN(numPersonas) || numPersonas < 1) {
+          alert("Por favor, ingrese un número mayor a 0.");
+          numPersonas = parseInt(
+            prompt("Ingrese el número de personas que desea registrar:")
+          );
+        }
+
+        // Ingreso de personas
+        for (let i = 0; i < numPersonas; i++) {
+          const nombre = prompt(`Ingrese el nombre de la persona ${i + 1}:`);
+          const edad = parseInt(prompt(`Ingrese la edad de ${nombre}:`));
+          const nota = parseFloat(prompt(`Ingrese la nota de ${nombre}:`));
+
+          personas.push([nombre, edad, nota]);
+        }
+
+        // Mostrar los datos originales
+        let mensaje = "Listado de personas ingresadas:\n";
+        personas.forEach((persona) => {
+          mensaje += `Nombre: ${persona[0]}, Edad: ${persona[1]}, Nota: ${persona[2]}\n`;
+        });
+
+        // Ordenar por nota de mayor a menor
+        personas.sort((a, b) => b[2] - a[2]);
+
+        // Mostrar los datos ordenados por nota
+        mensaje +=
+          "\nListado de personas ordenadas por nota (de mayor a menor):\n";
+        personas.forEach((persona) => {
+          mensaje += `Nombre: ${persona[0]}, Edad: ${persona[1]}, Nota: ${persona[2]}\n`;
+        });
+
+        // Mostrar el mensaje con los resultados en un alert
+        alert(mensaje);
+      }
+      window.location.reload();
+
+      // Llamar a la función
+      registrarPersonas();
+    </script>
+  </body>
+</html>
