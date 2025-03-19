@@ -13,7 +13,7 @@
 4. Navega hasta la carpeta donde guardaste el archivo `regsiter.js`.
 5. Ejecuta el siguiente comando:
 
-    node app.js
+    node register.js
 
 6. El programa te pedirá ingresar la cantidad de personas que deseas registrar.
 7. A continuación, ingresarás el nombre, la edad y la nota de cada persona.
@@ -34,7 +34,7 @@
 4. Navega hasta la carpeta donde guardaste el archivo `register.py`.
 5. Ejecuta el siguiente comando:
 
-    python app.py
+    python register.py
 
 6. El programa te pedirá ingresar la cantidad de personas que deseas registrar.
 7. A continuación, ingresarás el nombre, la edad y la nota de cada persona.
